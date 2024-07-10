@@ -1,7 +1,11 @@
 <div class="layout">
 
-    <app-first-block class="layout__column"></app-first-block>
-    <app-second-block class="layout__column"></app-second-block>
-    <app-third-block class="layout__column"></app-third-block>
+    <app-first-block class="layout__column"
+        (chosenStory)="handleStoryChange($event)"></app-first-block>
+    <app-second-block class="layout__column"
+        (addStoryEvent)="handleAddStory()"
+        (replaceStoryEvent)="handleReplaceStory()"></app-second-block>
+    <app-third-block class="layout__column"
+        [storyObservable]="story$"></app-third-block>
 
 </div>
