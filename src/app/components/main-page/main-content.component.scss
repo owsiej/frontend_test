@@ -1,0 +1,20 @@
+.layout {
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+
+    &__column {
+        overflow: hidden;
+        width: 35rem;
+        margin: 0 0.1rem;
+        padding: 0.1rem;
+        background-color: #f0f0f0;
+        border: 0.2rem solid #ddd;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

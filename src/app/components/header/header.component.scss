@@ -1,0 +1,17 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem;
+
+    background-color: #916565;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &__content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px 20px;
+    }
+}
