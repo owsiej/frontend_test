@@ -4,7 +4,6 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100%;
-    background-color: $body-color;
 
     &__main {
         display: grid;
@@ -28,6 +27,13 @@
             background-color: white;
             left: 3.3rem;
             right: 1.8rem;
+        }
+    }
+
+    @media (max-width: 960px) {
+        &__header {
+            font-size: 1.5rem;
+            font-weight: 100;
         }
     }
 }

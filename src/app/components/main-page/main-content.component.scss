@@ -16,4 +16,12 @@
             margin-right: 0;
         }
     }
+
+    @media (max-width: 960px) {
+        &__column {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 10rem;
+        }
+    }
 }

@@ -26,8 +26,8 @@
         margin-left: 3rem;
         appearance: none;
         color: $text-color;
-        width: 2em;
-        height: 2em;
+        width: 2rem;
+        height: 2rem;
         border: 0.2rem solid $text-color;
         border-radius: 50%;
         outline-width: 0.3rem;
@@ -40,6 +40,23 @@
             + .first-block__label {
                 font-weight: bold;
             }
+        }
+    }
+
+    @media (max-width: 960px) {
+        &__title {
+            margin-bottom: 1rem;
+            margin-left: 0.5rem;
+            text-align: left;
+        }
+
+        &__option-container {
+            margin-bottom: 0.7rem;
+        }
+        &__button {
+            margin-left: 0.5rem;
+            width: 1rem;
+            height: 1rem;
         }
     }
 }

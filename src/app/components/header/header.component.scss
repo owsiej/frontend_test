@@ -33,4 +33,13 @@
         margin-top: -1.3rem;
         text-align: right;
     }
+
+    @media (max-width: 960px) {
+        .header {
+            &__title {
+                font-size: 1.4rem;
+                margin-top: 0.1rem;
+            }
+        }
+    }
 }

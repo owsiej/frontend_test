@@ -54,7 +54,6 @@
         background-color: white;
         flex-direction: column;
         width: 13rem;
-        right: 6rem;
         padding-top: 0.5rem;
         &--option-button {
             margin: 0 0 0.4rem 0;
@@ -108,6 +107,21 @@
 
         to {
             transform: rotate(360deg);
+        }
+    }
+
+    @media (max-width: 960px) {
+        &__text {
+            display: none;
+        }
+
+        &__button {
+            margin-right: 2.5rem;
+            // padding: 0.7rem 4rem;
+        }
+        &__frame {
+            right: 3.6rem;
+            width: 12.7rem;
         }
     }
 }

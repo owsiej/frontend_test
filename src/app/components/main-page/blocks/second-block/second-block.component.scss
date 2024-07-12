@@ -30,4 +30,23 @@
             cursor: pointer;
         }
     }
+
+    @media (max-width: 960px) {
+        text-align: right;
+
+        &__title {
+            margin-bottom: 1rem;
+            margin-right: 0.3rem;
+        }
+
+        &__container {
+            align-items: flex-end;
+            flex-direction: column;
+        }
+
+        &__button {
+            margin: 0.3rem 0.5rem;
+            padding: 0.5rem 2rem;
+        }
+    }
 }

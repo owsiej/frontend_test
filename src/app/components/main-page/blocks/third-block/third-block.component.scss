@@ -1,11 +1,5 @@
 @import "../../../../styles/variables";
 
-h2 {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
 .third-block {
     text-align: center;
     margin-right: 3rem;
@@ -21,5 +15,9 @@ h2 {
         font-size: 0.7rem;
         font-weight: lighter;
         color: $grey-color;
+    }
+
+    @media (max-width: 960px) {
+        margin: 0 0.5rem;
     }
 }
