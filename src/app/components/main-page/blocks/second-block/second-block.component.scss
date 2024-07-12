@@ -1,0 +1,33 @@
+@import "../../../../styles/variables";
+
+.second-block {
+    text-align: center;
+
+    &__title {
+        margin-bottom: 3rem;
+        font-size: $block-headers-font-size;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button {
+        font-family: inherit;
+        font-weight: 900;
+        font-size: 0.9rem;
+        color: $grey-color;
+        margin: 0 1.5rem;
+        padding: 0.5rem 2.5rem;
+        background-color: transparent;
+        border: 0.15rem solid $text-color;
+        border-radius: 5%;
+
+        &:hover {
+            background-color: $hover-background-color;
+            color: $text-color;
+            cursor: pointer;
+        }
+    }
+}

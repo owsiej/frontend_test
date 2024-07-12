@@ -1,5 +1,25 @@
+@import "../../../../styles/variables";
+
 h2 {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+.third-block {
+    text-align: center;
+    margin-right: 3rem;
+
+    &__title {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: $block-headers-font-size;
+    }
+
+    &__story {
+        font-size: 0.7rem;
+        font-weight: lighter;
+        color: $grey-color;
+    }
 }

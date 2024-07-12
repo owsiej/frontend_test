@@ -1,0 +1,45 @@
+@import "../../../../styles/variables";
+
+.first-block {
+    display: block;
+    position: relative;
+    text-align: left;
+
+    &__title {
+        margin-bottom: 3rem;
+        text-align: center;
+        font-size: $block-headers-font-size;
+    }
+
+    &__label {
+        margin-left: 1rem;
+    }
+
+    &__option-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__button {
+        margin-left: 3rem;
+        appearance: none;
+        color: $text-color;
+        width: 2em;
+        height: 2em;
+        border: 0.2rem solid $text-color;
+        border-radius: 50%;
+        outline-width: 0.3rem;
+        outline-color: $body-color;
+        outline-style: solid;
+        outline-offset: -0.4rem;
+
+        &:checked {
+            background-color: $text-color;
+            + .first-block__label {
+                font-weight: bold;
+            }
+        }
+    }
+}

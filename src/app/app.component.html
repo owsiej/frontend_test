@@ -1,19 +1,11 @@
-<!-- 
-- pipe na sortowanie alfabetyczne tekstow
-- zalinkowac logo html5 w headerze
-- dodac zadanie rekrutacyjne z prawej strony headera
-- dodac naglowek h1 w main content
-- button pokaz w footerze jako div z 2 przyciskami
-    * pierwszy przycisk resetuje do ustawien poczatkowych (wyzerowanie stories, radio buttonow, imienia w headerze)
-    * drugi pokazuje 
-- ramka z lewej strony footera z animacja
-- styling
-- dodatkowa funkcjonalosc z local storage
--->
 <div class="app">
 
     <app-header></app-header>
-    <app-main-content></app-main-content>
+    <div class="app__main">
+        <h1 class="app__header">Nagłowek H1</h1>
+        <app-main-content class="app__content"></app-main-content>
+
+    </div>
     <app-footer></app-footer>
 
 </div>

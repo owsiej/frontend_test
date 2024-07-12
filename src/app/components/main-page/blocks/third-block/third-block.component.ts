@@ -1,6 +1,6 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
-import { StoryAction } from '../../../../models/story-action';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ManageDataService } from '../../../../services/manage-data.service';
 
 @Component({
   selector: 'app-third-block',
@@ -11,15 +11,17 @@ import { StoryAction } from '../../../../models/story-action';
 })
 export class ThirdBlockComponent implements OnInit, OnDestroy {
   public stories: string[] = [];
-  @Input() storyObservable!: Observable<StoryAction>;
   private storySub!: Subscription;
-  constructor() {}
+  constructor(private _dataService: ManageDataService) {}
   ngOnInit(): void {
-    this.storySub = this.storyObservable.subscribe((value) => {
+    this.storySub = this._dataService.story$.subscribe((value) => {
       if (value.action === 'add') {
         this.stories.push(value.story.content);
+        this.stories.sort();
       } else if (value.action === 'replace') {
         this.stories = [value.story.content];
+      } else if (value.action === 'reset') {
+        this.stories = [];
       }
     });
   }

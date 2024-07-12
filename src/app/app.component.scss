@@ -1,4 +1,33 @@
+@import "./styles/variables";
+
 .app {
     display: grid;
-    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    background-color: $body-color;
+
+    &__main {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        align-items: start;
+    }
+
+    &__header {
+        position: relative;
+        display: inline-block;
+        font-size: 2.6rem;
+        top: 0;
+        justify-self: center;
+        padding: 6rem 0 0 2rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -0.8rem;
+            height: 0.01rem;
+            background-color: white;
+            left: 3.3rem;
+            right: 1.8rem;
+        }
+    }
 }

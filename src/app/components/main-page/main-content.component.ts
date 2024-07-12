@@ -3,9 +3,8 @@ import { FirstBlockComponent } from './blocks/first-block/first-block.component'
 import { SecondBlockComponent } from './blocks/second-block/second-block.component';
 import { ThirdBlockComponent } from './blocks/third-block/third-block.component';
 import { LocalStorageService } from '../../services/local-storage.service';
-import { Subject } from 'rxjs';
 import { Story } from '../../models/story';
-import { StoryAction } from '../../models/story-action';
+import { ManageDataService } from '../../services/manage-data.service';
 
 @Component({
   selector: 'app-main-content',
@@ -15,11 +14,13 @@ import { StoryAction } from '../../models/story-action';
   styleUrl: './main-content.component.scss',
 })
 export class MainContentComponent {
-  constructor(private _localStorage: LocalStorageService) {}
+  constructor(
+    private _localStorage: LocalStorageService,
+    private _dataService: ManageDataService
+  ) {}
 
   private currentStoryNumber!: number;
-  private currentStory$ = new Subject<StoryAction>();
-  public story$ = this.currentStory$.asObservable();
+
   ngOnInit(): void {
     this._localStorage
       .getStoriesFromFile()
@@ -59,7 +60,7 @@ export class MainContentComponent {
   handleAddStory() {
     const story = this.getCurrentStory();
     if (story) {
-      this.currentStory$.next({
+      this._dataService.addStoryAction({
         story: story,
         action: 'add',
       });
@@ -69,7 +70,7 @@ export class MainContentComponent {
     this._localStorage.resetStoriesStatus();
     const story = this.getCurrentStory();
     if (story) {
-      this.currentStory$.next({
+      this._dataService.addStoryAction({
         story: story,
         action: 'replace',
       });

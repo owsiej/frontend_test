@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500");
+
+$customFont: "Open Sans";
+
+html,
+body {
+    font-family: $customFont;
+    color: white;
+    height: 100%;
+    margin: 0;
+}

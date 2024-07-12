@@ -1,9 +1,17 @@
-<h2>BLOK PIERWSZY</h2>
+<div class="first-block">
 
-@for (option of radioOptions; track option) {
-<input type="radio" name="option" [id]="option[0]"
-    [value]="option[0].split('_')[1]"
-    (change)="getChosenStory($event)">
-<label [for]="option[0]">{{option[1]}}</label>
-<br>
-}
+    <h2 class="first-block__title">BLOK PIERWSZY</h2>
+
+    @for (option of radioOptions; track option) {
+    <div class="first-block__option-container">
+        <input type="radio" name="option" [id]="option[0]"
+            [value]="option[0].split('_')[1]"
+            (change)="getChosenStory($event)" class="first-block__button">
+        <label class="first-block__label"
+            [for]="option[0]">{{option[1]}}</label>
+
+    </div>
+
+    }
+
+</div>

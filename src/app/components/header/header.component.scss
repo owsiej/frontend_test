@@ -1,17 +1,36 @@
-header {
+@import "../../styles/variables";
+
+.header {
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    z-index: 1000;
+    right: 0;
     padding: 1rem;
 
-    background-color: #916565;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: $header-background-color;
+    height: $bar-height;
 
-    &__content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 10px 20px;
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 0.5rem;
+        background-color: $grey-color;
+
+        &:hover {
+            background-color: $hover-background-color;
+        }
+    }
+    &__title {
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        color: white;
+        padding: 0 2rem 0 0;
+        margin-top: -1.3rem;
+        text-align: right;
     }
 }

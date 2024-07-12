@@ -1,1 +1,19 @@
-<footer>Footer</footer>
+<footer class="footer">
+    <div class="footer__square">
+        <div class="footer__square--text">
+            <p>CS <br> IS <br>AWESOME</p>
+        </div>
+    </div>
+    <p class="footer__text"> &mdash;nabthat&mdash;</p>
+    <button class="footer__button" (click)="handleButtonClick()"
+        [ngClass]="{'footer__button--active':isOptionButtonClicked}">POKAŻ
+    </button>
+    <div class="footer__frame"
+        [ngClass]="{'footer__frame--active':isOptionButtonClicked}">
+        <button class="footer__frame--option-button"
+            (click)="handleResetPageSettings()">> ZRESETUJ USTAWIENIA</button>
+        <button class="footer__frame--option-button"
+            (click)="handlePersonalDataButtonClick()">> POKAŻ DANE
+            OSOBOWE</button>
+    </div>
+</footer>

@@ -1,16 +1,113 @@
-footer {
+@import "../../styles/variables";
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
     padding: 1rem;
-    background-color: #a1c150;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    background-color: $footer-background-color;
+    height: $bar-height;
 
-    &__content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 10px 20px;
+    &__button {
+        position: relative;
+        margin-right: 5rem;
+        padding: 0.7rem 5rem;
+        background-color: transparent;
+        border: 0.01rem groove $grey-color;
+        border-radius: 5%;
+        color: $grey-color;
+        font-weight: 900;
+        font-family: inherit;
+        &:hover {
+            border-color: $text-color;
+            color: $text-color;
+            cursor: pointer;
+        }
+
+        &::after {
+            content: "^";
+            position: absolute;
+            margin-left: 0.4rem;
+            margin-top: 0.14rem;
+        }
+
+        &--active::after {
+            content: "ˇ";
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__text {
+        color: $grey-color;
+    }
+
+    &__frame {
+        position: absolute;
+        bottom: 6rem;
+        right: 6rem;
+        display: none;
+        background-color: white;
+        flex-direction: column;
+        width: 13rem;
+        right: 6rem;
+        padding-top: 0.5rem;
+        &--option-button {
+            margin: 0 0 0.4rem 0;
+            background-color: transparent;
+            width: 100%;
+            border: none;
+            font-family: inherit;
+            text-align: left;
+            font-weight: 600;
+            &:hover {
+                color: $hover-background-color;
+                cursor: pointer;
+            }
+        }
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__square {
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        margin-left: 0.5rem;
+        margin-right: 7.8rem;
+        border: 0.2rem groove rgb(87, 80, 80);
+        border-color: rgb(87, 80, 80);
+        background-color: transparent;
+        transition: transform 0.5s ease;
+
+        &:hover {
+            border-color: $hover-background-color;
+            animation: rotateSquare 1s;
+            cursor: pointer;
+        }
+        &--text {
+            margin-top: -0.9rem;
+            color: rgb(74, 70, 70);
+
+            &:hover {
+                color: rgb(159, 154, 154);
+            }
+        }
+    }
+
+    @keyframes rotateSquare {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
     }
 }
