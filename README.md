@@ -7,7 +7,7 @@
 
   <p align="center">
     Recruitment task for the company Nabthat for the position of Junior Frontend Developer. .<br>
-<b>🚀DEPLOYED ON</b>: <a>https://nabthat-recruitment-task.web.app</a>
+<b>🚀DEPLOYED ON</b>: <a href="https://nabthat-recruitment-task.web.app">FIREBASE HOSTING</a>
 </div>
 
 <!-- TABLE OF CONTENTS -->
