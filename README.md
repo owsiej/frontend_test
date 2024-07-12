@@ -7,7 +7,7 @@
 
   <p align="center">
     Recruitment task for the company Nabthat for the position of Junior Frontend Developer. .<br>
-<b>🚀DEPLOYED ON</b>: 
+<b>🚀DEPLOYED ON</b>: <a>https://nabthat-recruitment-task.web.app</a>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -54,7 +54,7 @@ All the basic functionality described in the guidelines has been implemented.
 &emsp;&emsp;➡️ there is no more story to add<br>
 &emsp;&emsp;➡️ paste/replace button is clicked without choosing option in first block<br>
 ⚠️ Show button in footer works properly but with some help of JS😓<br>
-✔️ Project deployed on:<br>
+✔️ Project deployed on Firebase using Hosting: https://nabthat-recruitment-task.web.app<br>
 ⭐⭐ Data from json file is loaded and saved in local storage. All further modifications on stories are saved in local storage<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
